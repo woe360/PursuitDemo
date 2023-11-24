@@ -1,20 +1,13 @@
 import React from 'react';
 import {
   SafeAreaView,
-  StyleSheet,
   Pressable,
-  ImageBackground,
   Text,
   View,
   ScrollView,
-  Dimensions,
 } from 'react-native';
 
 import styles from './styles';
-
-import MiniFilters from '../../Components/MiniFilters';
-import Categories from '../../Components/Categories';
-import EventCarousel from '../../Components/EventCarousel';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import ToggleButtons from "../../Components/ToggleButtons";

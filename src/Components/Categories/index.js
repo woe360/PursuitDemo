@@ -17,7 +17,7 @@ const CategoryButton = ({ title, color, details, onPress, selected }) => {
       onPress={onPress}
       style={[
         styles.categoryButton,
-        { backgroundColor: selected ? '#7e0202' : color } // Use color from the item
+        { backgroundColor: selected ? color : color } // Use color from the item
       ]}
     >
       <Text style={styles.buttonText}>{title}</Text>

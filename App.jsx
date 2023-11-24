@@ -1,3 +1,5 @@
+// import 'react-native-gesture-handler';
+import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -6,26 +8,30 @@ import {
   StatusBar,
 } from 'react-native';
 
-import React from 'react';
 
 import Homepage from './src/Screens/Homepage';
-import MapView from "./src/Screens/MapView";
-import SearchResults from "./src/Screens/SearchResults";
-import DestinationSearch from "./src/Screens/DestinationSearch";
+
+import Tabs from './src/Components/Navigation/Tabs';
+import {NavigationContainer} from '@react-navigation/native';
+
+import Categories from "./src/Components/Categories";
 import YourEvents from "./src/Screens/YourEvents";
-import Pursuits from "./src/Components/Pursuits";
+import DestinationSearch from "./src/Screens/DestinationSearch";
 
 const App = () => {
   return (
-    <View>
-      <StatusBar barStyle="light-content" />
-      {/*<Homepage />*/}
-      <MapView />
-      {/*<SearchResults />*/}
-      {/*<DestinationSearch /> //pabaigti*/}
-      {/*<YourEvents /> // padaryti jog paspaudus toggle mygtukus persijungtu ekranas*/}
+    <NavigationContainer>
+      <Tabs />
+    </NavigationContainer>
 
-    </View>
+    // <View>
+    //   <StatusBar barStyle="light-content" />
+    //   {/*<Homepage />*/}
+    //   {/*<Tabs />*/}
+    //   {/*<Categories />*/}
+    //   {/*<YourEvents />*/}
+    //   {/*<DestinationSearch/>*/}
+    // </View>
   );
 };
 

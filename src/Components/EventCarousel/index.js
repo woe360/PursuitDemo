@@ -15,7 +15,7 @@ const eventsData = [
     date: '10 JUNE',
     title: 'International Band Music Concert',
     location: '36 Guild Street London, UK',
-    image: './assets/images/img.png', // replace with your image paths or URIs
+    image: 'https://picsum.photos/200/300', // replace with your image paths or URIs
     price: '112€',
   },
   {
@@ -23,24 +23,24 @@ const eventsData = [
     date: '10 JUNE',
     title: 'International Concert',
     location: '36 Guild Street London, UK',
-    image: './assets/images/img.png', // replace with your image paths or URIs
+    image: 'https://picsum.photos/200', // replace with your image paths or URIs
     price: '112€',
   },
   {
-    id: 'event2',
+    id: 'event3',
     date: '10 JUNE',
     title: 'International Concert',
     location: '36 Guild Street London, UK',
-    image: './assets/images/img.png', // replace with your image paths or URIs
+    image: 'https://picsum.photos/200/300', // replace with your image paths or URIs
     price: '112€',
   },
   {
-    id: 'event2',
+    id: 'event4',
     date: '10 JUNE',
     title: 'International Concert',
     location: '36 Guild Street London, UK',
-    image: './assets/images/img.png', // replace with your image paths or URIs
-    price: '112€',
+    image: 'https://picsum.photos/200/300', // replace with your image paths or URIs
+    price: '1121€',
   },
   // ... more events
 ];
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   details: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black background
+    backgroundColor: 'rgba(0,0,0,0.76)', // Semi-transparent black background
     padding: 10,
   },
   title: {
