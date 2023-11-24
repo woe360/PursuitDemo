@@ -28,27 +28,27 @@ const Tabs = () => {
         name="Explore"
         component={Homepage}
         options={{
-        tabBarIcon: ({focused}) => (
-          <View style={{
-            alignItems: 'center',
-            justifyContent: 'center',
-            top: 10,
-            left: 10,
-          }}>
-            <Image
-              source={require('../../../assets/images/explore.png')}
-              resizeMode={'contain'}
-              style={{
-                width: 30,
-                height: 25,
-                tintColor: focused ? '#fff' : '#fff',
-                   }}
-                   />
+          tabBarIcon: ({focused}) => (
+            <View style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: 10,
+                left: 10,
+              }}>
+              <Image
+                source={require('../../../assets/images/explore.png')}
+                resizeMode={'contain'}
+                style={{
+                  width: 30,
+                  height: 25,
+                  tintColor: focused ? '#fff' : '#fff',
+                }}
+              />
             <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 15, }}>Explore</Text>
-          </View>
-        ),
-      }}
-            />
+            </View>
+          ),
+        }}
+      />
 
       <Tab.Screen name="Maps" component={MapView}options={{
         tabBarIcon: ({focused}) => (
@@ -106,7 +106,7 @@ const Tabs = () => {
               style={{
                 width: 30,
                 height: 25,
-                tintColor: focused ? '#fff' : '#fff',
+                  tintColor: focused ? '#fff' : '#fff',
               }}
             />
             <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 15, }}>Account</Text>

@@ -20,7 +20,9 @@ import DestinationSearch from "./src/Screens/DestinationSearch";
 
 const App = () => {
   return (
+
     <NavigationContainer>
+      <StatusBar barStyle="light-content" />
       <Tabs />
     </NavigationContainer>
 

@@ -7,7 +7,6 @@ import { View,
   FlatList,
 } from 'react-native';
 
-// Dummy data array for the events
 
 const eventsData = [
   {
@@ -15,7 +14,7 @@ const eventsData = [
     date: '10 JUNE',
     title: 'International Band Music Concert',
     location: '36 Guild Street London, UK',
-    image: 'https://picsum.photos/200/300', // replace with your image paths or URIs
+    image: 'https://picsum.photos/200/300',
     price: '112€',
   },
   {
@@ -23,7 +22,7 @@ const eventsData = [
     date: '10 JUNE',
     title: 'International Concert',
     location: '36 Guild Street London, UK',
-    image: 'https://picsum.photos/200', // replace with your image paths or URIs
+    image: 'https://picsum.photos/200',
     price: '112€',
   },
   {
@@ -31,7 +30,7 @@ const eventsData = [
     date: '10 JUNE',
     title: 'International Concert',
     location: '36 Guild Street London, UK',
-    image: 'https://picsum.photos/200/300', // replace with your image paths or URIs
+    image: 'https://picsum.photos/200/300',
     price: '112€',
   },
   {
@@ -39,7 +38,7 @@ const eventsData = [
     date: '10 JUNE',
     title: 'International Concert',
     location: '36 Guild Street London, UK',
-    image: 'https://picsum.photos/200/300', // replace with your image paths or URIs
+    image: 'https://picsum.photos/200/300',
     price: '1121€',
   },
   // ... more events
@@ -65,7 +64,6 @@ const EventCard = ({ event, onPress }) => {
 
 const EventCarousel = () => {
   const handlePress = (eventId) => {
-    // Here you can handle navigation to the event details screen
     console.log('Pressed event:', eventId);
   };
 
@@ -78,8 +76,8 @@ const EventCarousel = () => {
       data={eventsData}
       renderItem={renderEventCard}
       keyExtractor={(item) => item.id}
-      horizontal={true} // Set to true to make the list horizontal
-      showsHorizontalScrollIndicator={false} // Hide the scroll bar
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
     />
   );
 };
@@ -87,18 +85,18 @@ const EventCarousel = () => {
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,
-    overflow: 'hidden', // issiaiskinti ka sitas reiskia
+    overflow: 'hidden',
     margin: 10,
-    width: 300, // Set a fixed width for each card
-    height: 200, // Set a fixed height for each card
+    width: 300,
+    height: 200,
   },
   image: {
     width: '100%',
     height: '100%',
-    justifyContent: 'space-between', // Align date top-right, details bottom-left
+    justifyContent: 'space-between',
   },
   dateContainer: {
-    backgroundColor: 'rgba(255, 255, 255, 0.5)', // Semi-transparent white background
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     alignSelf: 'flex-start',
     margin: 10,
     padding: 5,
@@ -112,8 +110,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   details: {
-    backgroundColor: 'rgba(0,0,0,0.76)', // Semi-transparent black background
+    backgroundColor: 'rgba(0,0,0,0.76)',
     padding: 10,
+    height: 70,
+    justifyContent: 'center',
   },
   title: {
     color: '#fff',
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   priceContainer: {
-    backgroundColor: '#40DA46', // Semi-transparent white background
+    backgroundColor: '#40DA46',
     alignSelf: 'flex-start',
     margin: 10,
     padding: 5,
@@ -139,7 +139,6 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontWeight: 'bold',
   },
-  // ... add styles for other elements
 });
 
 export default EventCarousel;

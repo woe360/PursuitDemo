@@ -1,4 +1,47 @@
-import React from 'react';
+// import React from 'react';
+// import {
+//   SafeAreaView,
+//   Pressable,
+//   Text,
+//   View,
+//   ScrollView,
+// } from 'react-native';
+//
+// import styles from './styles';
+//
+// import FontAwesome from 'react-native-vector-icons/FontAwesome';
+// import ToggleButtons from "../../Components/ToggleButtons";
+// import { Header } from "react-native/Libraries/NewAppScreen";
+// import HeaderWithIcons from "../../Components/HeaderWithIcons";
+// import Pursuits from "../../Components/Pursuits";
+// import PastPursuits from "../../Components/PastPursuits";
+//
+// const YourEvents = () => {
+//
+//   return (
+//     <View style={styles.background}>
+//       <ScrollView style={styles.scrollView}>
+//
+//         <Text style={styles.title}>Pursuits</Text>
+//
+//         <ToggleButtons />
+//
+//         <PastPursuits />
+//
+//         <Pressable
+//           style={styles.button}
+//           onPress={() => console.warn('Explore events btn clicked')}>
+//           <Text style={styles.buttonText}>Explore events</Text>
+//         </Pressable>
+//       </ScrollView>
+//     </View>
+//   );
+// };
+//
+// export default YourEvents;
+
+
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   Pressable,
@@ -17,6 +60,11 @@ import Pursuits from "../../Components/Pursuits";
 import PastPursuits from "../../Components/PastPursuits";
 
 const YourEvents = () => {
+  const [selectedPage, setSelectedPage] = useState('upcomming');
+
+  const handleToggle = (selection) => {
+    setSelectedPage(selection);
+  };
 
   return (
     <View style={styles.background}>
@@ -24,9 +72,9 @@ const YourEvents = () => {
 
         <Text style={styles.title}>Pursuits</Text>
 
-        <ToggleButtons />
+        <ToggleButtons onToggle={handleToggle} />
+        {selectedPage === 'upcoming' ? <Pursuits /> : <PastPursuits />}
 
-        <PastPursuits />
 
         <Pressable
           style={styles.button}

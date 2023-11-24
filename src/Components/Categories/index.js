@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from "react-native";
+
+
+// import movies from '/assets/images/movies.png';
+// import eventsImage from './Pursuitsdemo/assets/images/events.png';
+// import comedyImage from './Pursuitsdemo/assets/images/comedy.png';
+// import sportsImage from './Pursuitsdemo/assets/images/sports.png';
+// import upskillImage from './Pursuitsdemo/assets/images/upskill.png';
+// import esportsImage from './Pursuitsdemo/assets/images/esports.png';
 
 const data = [
-  { title: 'Movies', key: 'movies', color: '#FF6347', details: '20+ movies\nNear you' },
+  { title: 'Movies', key: 'movies', color: '#FF6347', details: '20+ movies\nNear you',  },
   { title: 'Events', key: 'events', color: '#FFD700', details: '10 concerts\nNear you' },
   { title: 'Comedy', key: 'comedy', color: '#FFA500', details: '15 shows\nNear you' },
   { title: 'Sports', key: 'sports', color: '#3CB371', details: '5 Events\nNear you' },
@@ -12,6 +20,8 @@ const data = [
 ];
 
 const CategoryButton = ({ title, color, details, onPress, selected }) => {
+
+
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -20,6 +30,7 @@ const CategoryButton = ({ title, color, details, onPress, selected }) => {
         { backgroundColor: selected ? color : color } // Use color from the item
       ]}
     >
+      {/*<Image source={require()} style={styles.image}/>*/}
       <Text style={styles.buttonText}>{title}</Text>
       <Text style={styles.detailsText}>{details}</Text>
     </TouchableOpacity>
@@ -55,7 +66,8 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 10,
     borderRadius: 10,
-    height: 170, // Adjust the height as needed
+    width: 100,
+    height: 150, // Adjust the height as needed
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10, // Added padding for inner spacing
@@ -74,7 +86,12 @@ const styles = StyleSheet.create({
   columnWrapper: {
     justifyContent: 'space-between',
   },
-  // ... other styles
+  image: {
+    width: '100%', // Adjust as needed
+    height: 100, // Adjust as needed
+    borderRadius: 5, // Optional, for rounded corners
+    marginBottom: 10, // Space between image and text
+  },
 });
 
 export default Categories;

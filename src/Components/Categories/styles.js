@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
   },
   categoryButtons: {
     backgroundColor: '#b02828',
-    width: 150,
-    height: 150,
+    width: 120,
+    height: 120,
     borderRadius: 10,
     marginTop: 15,
     marginLeft: 25,

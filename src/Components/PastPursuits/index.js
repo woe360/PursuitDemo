@@ -35,15 +35,6 @@ const events = [
     location: 'Lot 13 • Oakland, CA',
     price: '13€',
   },
-  {
-    id: 5,
-    imageUrl: 'https://picsum.photos/200',
-    date: 'Fri, Apr 23 - 6:00 PM',
-    title: 'International Kids Safe Parents Night Out',
-    location: 'Lot 13 • Oakland, CA',
-    price: '13€',
-  },
-  // ... additional events
 ];
 
 const EventButton = ({ event }) => {
