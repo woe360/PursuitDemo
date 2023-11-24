@@ -13,13 +13,13 @@ import {
 import styles from './styles';
 
 import MiniFilters from '../../Components/MiniFilters';
-
+import SearchResultsMap from '../SearchResultsMap';
 
 const MapView = () => {
 
   return (
     <View style={styles.background}>
-      <ScrollView style={styles.scrollView}>
+      <View style={styles.scrollView}>
 
         <Pressable
           style={styles.searchButton}
@@ -29,9 +29,11 @@ const MapView = () => {
           <Text style={styles.searchButtonText}>Search activities</Text>
         </Pressable>
 
-        <MiniFilters />
+        {/*<MiniFilters />*/}
 
-      </ScrollView>
+        <SearchResultsMap />
+
+      </View>
     </View>
   );
 };

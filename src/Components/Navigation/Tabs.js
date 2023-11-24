@@ -39,12 +39,13 @@ const Tabs = () => {
                 source={require('../../../assets/images/explore.png')}
                 resizeMode={'contain'}
                 style={{
-                  width: 30,
+                  width: 25,
                   height: 25,
+                  marginBottom: 5,
                   tintColor: focused ? '#fff' : '#fff',
                 }}
               />
-            <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 15, }}>Explore</Text>
+            <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 13, }}>Explore</Text>
             </View>
           ),
         }}
@@ -62,12 +63,13 @@ const Tabs = () => {
               source={require('../../../assets/images/map.png')}
               resizeMode={'contain'}
               style={{
-                width: 30,
+                width: 25,
                 height: 25,
+                marginBottom: 5,
                 tintColor: focused ? '#fff' : '#fff',
               }}
             />
-            <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 15, }}>Maps</Text>
+            <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 13, }}>Maps</Text>
           </View>
         ),
       }}/>
@@ -83,12 +85,13 @@ const Tabs = () => {
               source={require('../../../assets/images/pursuit.png')}
               resizeMode={'contain'}
               style={{
-                width: 30,
+                width: 25,
                 height: 25,
+                marginBottom: 5,
                 tintColor: focused ? '#fff' : '#fff',
               }}
             />
-            <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 15, }}>Pursuits</Text>
+            <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 13, }}>Pursuits</Text>
           </View>
         ),
       }}/>
@@ -104,12 +107,13 @@ const Tabs = () => {
               source={require('../../../assets/images/account.png')}
               resizeMode={'contain'}
               style={{
-                width: 30,
+                width: 25,
                 height: 25,
+                marginBottom: 5,
                   tintColor: focused ? '#fff' : '#fff',
               }}
             />
-            <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 15, }}>Account</Text>
+            <Text style={{color: focused ? '#40DA46' : '#fff', fontSize: 13, }}>Account</Text>
           </View>
         ),
       }}/>
