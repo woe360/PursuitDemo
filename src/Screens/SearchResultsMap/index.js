@@ -11,6 +11,7 @@ import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import CustomMarker from "../../Components/CustomMarker";
 
 import places from '../../../assets/data/feed';
+import EventCarouselMap from "../../Components/EventCarouselMap";
 const SearchResultsMap = (props) => {
 
   const [selectedPlaceId, setSelectedPlaceId] = useState(null);
@@ -35,6 +36,9 @@ const SearchResultsMap = (props) => {
           />)
         )}
       </MapView>
+      <View style={{position: 'absolute', bottom: 80}}>
+      <EventCarouselMap />
+      </View>
     </View>
   );
 };
