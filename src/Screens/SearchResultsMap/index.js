@@ -4,7 +4,7 @@ import {
   ScrollView,
   Dimensions,
   SafeAreaView,
-  Text, Image,
+  Text, Image, FlatList,
 } from "react-native";
 
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
@@ -37,7 +37,7 @@ const SearchResultsMap = (props) => {
         )}
       </MapView>
       <View style={{position: 'absolute', bottom: 80}}>
-      <EventCarouselMap />
+        <EventCarouselMap/>
       </View>
     </View>
   );
