@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   priceContainer: {
-    backgroundColor: '#40DA46',
+    backgroundColor: 'rgba(255,255,255,0.92)',
     alignSelf: 'flex-start',
     margin: 10,
     padding: 5,

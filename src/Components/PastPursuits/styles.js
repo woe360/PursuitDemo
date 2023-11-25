@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   eventButton: {
     flexDirection: 'row',
-    backgroundColor: '#979797',
+    backgroundColor: '#691313',
     borderRadius: 10,
     padding: 10,
     marginVertical: 8,
@@ -13,34 +13,40 @@ export default StyleSheet.create({
     shadowColor: 'black',
     shadowOffset: { height: 3, width: 3 },
     elevation: 6,
+    height: 110,
     width: '85%',
     alignItems: 'center',
     marginLeft: 30,
+    alignContent: 'center',
   },
   eventImage: {
-    width: 80,
-    height: 80,
+    width: 110,
+    height: 110,
     borderRadius: 10,
     marginRight: 10,
+    marginLeft: -10,
   },
   eventDetails: {
     justifyContent: 'center',
   },
   eventDate: {
     fontSize: 12,
-    color: '#ffffff',
+    color: '#000',
   },
   eventTitle: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#000',
     width: '70%',
+    marginTop: 7,
   },
   eventLocation: {
     fontSize: 12,
-    color: '#666',
+    color: '#000',
   },
   eventPrice: {
     marginTop: 6,
+    color: '#000',
+    fontWeight: 'bold',
   },
 });

@@ -22,8 +22,12 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.background}>
-      <ScrollView style={styles.scrollView}>
 
+      <ImageBackground
+        source={require('../../../assets/images/Homepage.png')} // Use require to load the image
+        style={styles.background}
+      >
+      <ScrollView style={styles.scrollView}>
         <Pressable
           style={styles.searchButton}
           onPress={() => console.warn('Event Search')}>
@@ -50,6 +54,7 @@ const HomeScreen = () => {
           <Text style={styles.buttonText}>Explore events</Text>
         </Pressable>
       </ScrollView>
+    </ImageBackground>
     </View>
   );
 };

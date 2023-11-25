@@ -67,16 +67,16 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 10,
     width: 100,
-    height: 150, // Adjust the height as needed
+    height: 150,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 10, // Added padding for inner spacing
+    padding: 10,
   },
   buttonText: {
     fontWeight: 'bold',
     fontSize: 18,
     color: '#FFFFFF',
-    marginBottom: 4, // Space between title and details
+    marginBottom: 4,
   },
   detailsText: {
     fontSize: 14,
@@ -87,10 +87,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   image: {
-    width: '100%', // Adjust as needed
-    height: 100, // Adjust as needed
-    borderRadius: 5, // Optional, for rounded corners
-    marginBottom: 10, // Space between image and text
+    width: '100%',
+    height: 100,
+    borderRadius: 5,
+    marginBottom: 10,
   },
 });
 

@@ -4,7 +4,8 @@ export default [
     "image": require("../../assets/images/Yoga.png"), // assuming you have a yoga_park.jpg in assets/images
     "type": "Sports",
     "title": "Morning Yoga at Vingis Park",
-    "description": "Start your day with refreshing yoga surrounded by the tranquility of nature.",
+    description:
+      "Start your day with refreshing yoga surrounded by the tranquility of nature.",
     "price": 15,
     "address": "Vingis Park, Vilnius", // added address field
     "coordinates": {
@@ -12,7 +13,7 @@ export default [
       "longitude": 25.2833,
     },
     "time": "08:00 AM - 09:00 AM",
-    "date": "2023-12-05"
+    "date": "2023-12-05",
   },
   {
     "id": "2",

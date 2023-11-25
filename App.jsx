@@ -18,7 +18,6 @@ import Categories from "./src/Components/Categories";
 import YourEvents from "./src/Screens/YourEvents";
 import DestinationSearch from "./src/Screens/DestinationSearch";
 import SearchResults from "./src/Screens/SearchResults";
-
 const App = () => {
   return (
 
