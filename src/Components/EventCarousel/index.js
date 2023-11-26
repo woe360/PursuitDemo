@@ -7,55 +7,21 @@ import { View,
   FlatList,
 } from 'react-native';
 
+import places from '../../../assets/data/feed';
 
-const eventsData = [
-  {
-    id: 'event1',
-    date: '10 JUNE',
-    title: 'International Band Music Concert',
-    location: '36 Guild Street London, UK',
-    image: 'https://picsum.photos/200/300',
-    price: '112€',
-  },
-  {
-    id: 'event2',
-    date: '10 JUNE',
-    title: 'International Concert',
-    location: '36 Guild Street London, UK',
-    image: 'https://picsum.photos/200',
-    price: '112€',
-  },
-  {
-    id: 'event3',
-    date: '10 JUNE',
-    title: 'International Concert',
-    location: '36 Guild Street London, UK',
-    image: 'https://picsum.photos/200/300',
-    price: '112€',
-  },
-  {
-    id: 'event4',
-    date: '10 JUNE',
-    title: 'International Concert',
-    location: '36 Guild Street London, UK',
-    image: 'https://picsum.photos/200/300',
-    price: '1121€',
-  },
-  // ... more events
-];
 const EventCard = ({ event, onPress }) => {
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>
-      <ImageBackground source={{ uri: event.image }} style={styles.image}>
+      <ImageBackground source={event.image} style={styles.image}>
         <View style={styles.dateContainer}>
           <Text style={styles.dateText}>{event.date}</Text>
         </View>
         <View style={styles.priceContainer}>
-          <Text style={styles.priceText}>{event.price}</Text>
+          <Text style={styles.priceText}>{event.price}€</Text>
         </View>
         <View style={styles.details}>
           <Text style={styles.title}>{event.title}</Text>
-          <Text style={styles.location}>{event.location}</Text>
+          <Text style={styles.location}>{event.address}</Text>
         </View>
       </ImageBackground>
     </TouchableOpacity>
@@ -73,7 +39,7 @@ const EventCarousel = () => {
 
   return (
     <FlatList
-      data={eventsData}
+      data={places}
       renderItem={renderEventCard}
       keyExtractor={(item) => item.id}
       horizontal={true}
@@ -127,10 +93,10 @@ const styles = StyleSheet.create({
   priceContainer: {
     backgroundColor: 'rgba(255,255,255,0.92)',
     alignSelf: 'flex-start',
-    margin: 10,
+    marginTop: 25,
     padding: 5,
     borderRadius: 10,
-    height: 40,
+    height: 30,
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 250,

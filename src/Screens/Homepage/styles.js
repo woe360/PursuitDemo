@@ -34,8 +34,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 30,
     marginLeft: 55,
+    marginBottom: 120,
     justifyContent: 'center',
     alignItems: 'center',
+    flex: 1,
   },
   buttonText: {
     fontSize: 16,
@@ -60,6 +62,28 @@ const styles = StyleSheet.create({
     fontSize: 19,
     fontWeight: '600',
     color: '#000000',
+    marginRight: 95,
+    marginLeft: 35,
+  },
+  scrollView: {
+    width: '100%',
+    height: '100%',
+  },
+  iconLeft: {
+    width: 25,
+    height: 25,
+    marginRight: 30,
+  },
+  iconRight: {
+    width: 25,
+    height: 25,
+    marginRight: 10,
+  },
+  filterButton: {
+    position: 'absolute',
+    right: 20,
+    top: 80,
+    zIndex: 101,
   },
 });
 

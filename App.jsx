@@ -18,6 +18,9 @@ import Categories from "./src/Components/Categories";
 import YourEvents from "./src/Screens/YourEvents";
 import DestinationSearch from "./src/Screens/DestinationSearch";
 import SearchResults from "./src/Screens/SearchResults";
+import EventDetails from "./src/Screens/EventDetails";
+
+
 const App = () => {
   return (
 
@@ -34,6 +37,7 @@ const App = () => {
     //   {/*<YourEvents />*/}
     //   {/*<DestinationSearch/>*/}
     //   {/*<SearchResults/>*/}
+    //   <EventDetails/>
     // </View>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native';
 import styles from './styles';
-import places from '../../../assets/data/feed';
+import places from '../../../assets/data/pastFeed';
 
 const EventButton = ({ event }) => {
   return (
@@ -29,4 +29,3 @@ const Pursuits = () => {
 };
 
 export default Pursuits;
-

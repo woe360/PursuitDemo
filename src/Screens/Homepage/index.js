@@ -8,6 +8,7 @@ import {
   View,
   ScrollView,
   Dimensions,
+  Image,
 } from 'react-native';
 
 import styles from './styles';
@@ -16,13 +17,12 @@ import MiniFilters from '../../Components/MiniFilters';
 import Categories from '../../Components/Categories';
 import EventCarousel from '../../Components/EventCarousel';
 
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import searchIcon from '../../../assets/images/search.png';
+import filterIcon from '../../../assets/images/filter.png';
 
 const HomeScreen = () => {
-
   return (
     <View style={styles.background}>
-
       <ImageBackground
         source={require('../../../assets/images/Homepage.png')} // Use require to load the image
         style={styles.background}
@@ -31,11 +31,17 @@ const HomeScreen = () => {
         <Pressable
           style={styles.searchButton}
           onPress={() => console.warn('Event Search')}>
-          {/*  onPress={() => navigation.navigate('Destination Search')}>*/}
-          {/*<Fontisto name="search" size={25} color={'red'} />*/}
-          {/*<FontAwesome name="search" size={20} color="#000" />*/}
+            {/*onPress={() => navigation.navigate('EventSearch')}>*/}
+          <Image source={searchIcon} style={styles.iconLeft} />
           <Text style={styles.searchButtonText}>Search activities</Text>
-          {/*<FontAwesome name="filter" size={20} color="#000" />*/}
+          {/*<Image source={filterIcon} style={styles.iconRight} />*/}
+
+        </Pressable>
+        <Pressable
+          style={styles.filterButton}
+          onPress={() => console.warn('Filter Search')}>
+          {/*onPress={() => navigation.navigate('Filter')}>*/}
+          <Image source={filterIcon} style={styles.iconRight} />
         </Pressable>
 
         <MiniFilters />
@@ -58,5 +64,4 @@ const HomeScreen = () => {
     </View>
   );
 };
-
 export default HomeScreen;
