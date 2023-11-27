@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   searchButton: {
-    backgroundColor: '#9d9d9d',
-    opacity: 0.4,
+    backgroundColor: 'rgba(157,157,157,0.73)',
+    // opacity: 0.4,
     height: 60,
     width: Dimensions.get('screen').width - 20,
     borderRadius: 10,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   searchButtonText: {
     fontSize: 19,
     fontWeight: '600',
-    color: '#000000',
+    color: '#fff',
     marginRight: 95,
     marginLeft: 35,
   },
@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
     top: 80,
     zIndex: 101,
   },
-
 });
 
 export default styles;

@@ -20,7 +20,12 @@ import EventCarousel from '../../Components/EventCarousel';
 import searchIcon from '../../../assets/images/search.png';
 import filterIcon from '../../../assets/images/filter.png';
 
-const HomeScreen = () => {
+import {useNavigation} from '@react-navigation/native';
+import Ionicons from "react-native-vector-icons/Ionicons";
+
+const HomeScreen = (props) => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.background}>
       <ImageBackground
@@ -30,18 +35,16 @@ const HomeScreen = () => {
       <ScrollView style={styles.scrollView}>
         <Pressable
           style={styles.searchButton}
-          onPress={() => console.warn('Event Search')}>
-            {/*onPress={() => navigation.navigate('EventSearch')}>*/}
-          <Image source={searchIcon} style={styles.iconLeft} />
+          onPress={() => navigation.navigate('Event Search')}>
+          <Ionicons name="search" size={25} color="#000" style={styles.iconLeft} />
           <Text style={styles.searchButtonText}>Search activities</Text>
-          {/*<Image source={filterIcon} style={styles.iconRight} />*/}
 
         </Pressable>
         <Pressable
           style={styles.filterButton}
           onPress={() => console.warn('Filter Search')}>
           {/*onPress={() => navigation.navigate('Filter')}>*/}
-          <Image source={filterIcon} style={styles.iconRight} />
+          <Ionicons name="options-outline" size={25} color="#000" style={styles.iconRight} />
         </Pressable>
 
         <MiniFilters />

@@ -16,7 +16,6 @@ export default StyleSheet.create({
     height: 110,
     width: '85%',
     alignItems: 'center',
-    marginLeft: 30,
     alignContent: 'center',
   },
   eventImage: {

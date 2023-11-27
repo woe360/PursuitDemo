@@ -5,8 +5,10 @@ import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Homepage from '../../Screens/Homepage';
 import MapView from "../../Screens/MapView";
 import YourEvents from "../../Screens/YourEvents";
+import Account from "../../Screens/Account";
 import DestinationSearch from "../../Screens/DestinationSearch";
 import Fontisto from "react-native-vector-icons/Fontisto";
+import EventSearch from "../../Screens/EventSearch";
 
 
 const Tab = createBottomTabNavigator();
@@ -51,8 +53,11 @@ const Tabs = () => {
         }}
       />
 
-      <Tab.Screen name="Maps" component={MapView}options={{
-        tabBarIcon: ({focused}) => (
+      <Tab.Screen
+        name="Maps"
+        component={MapView}
+        options={{
+          tabBarIcon: ({focused}) => (
           <View style={{
             alignItems: 'center',
             justifyContent: 'center',
@@ -73,8 +78,11 @@ const Tabs = () => {
           </View>
         ),
       }}/>
-      <Tab.Screen name="Pursuits" component={YourEvents}options={{
-        tabBarIcon: ({focused}) => (
+      <Tab.Screen
+        name="Pursuits"
+        component={YourEvents}
+        options={{
+          tabBarIcon: ({focused}) => (
           <View style={{
             alignItems: 'center',
             justifyContent: 'center',
@@ -95,8 +103,11 @@ const Tabs = () => {
           </View>
         ),
       }}/>
-      <Tab.Screen name="Account" component={YourEvents}options={{
-        tabBarIcon: ({focused}) => (
+      <Tab.Screen
+        name="Account"
+        component={Account}
+        options={{
+          tabBarIcon: ({focused}) => (
           <View style={{
             alignItems: 'center',
             justifyContent: 'center',

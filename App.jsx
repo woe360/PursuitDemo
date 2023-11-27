@@ -1,4 +1,4 @@
-// import 'react-native-gesture-handler';
+import 'react-native-gesture-handler';
 import React from 'react';
 import {
   SafeAreaView,
@@ -23,6 +23,7 @@ import SignIn from "./src/Screens/SignIn";
 import SignUp1 from "./src/Screens/SignUp";
 import EventSearch from "./src/Screens/EventSearch";
 
+import Router from './src/Components/Navigation/Router';
 
 const App = () => {
   return (
@@ -32,17 +33,19 @@ const App = () => {
     //   <Tabs />
     // </NavigationContainer>
 
-    <View>
-      <StatusBar barStyle="light-content" />
-      {/*<Homepage />*/}
-      {/*<YourEvents />*/}
-      {/*<DestinationSearch/>*/}
-      {/*<SearchResults/>*/}
-      {/*<EventDetails/>*/}
-      {/*<SignIn />*/}
-      {/*<SignUp1/>*/}
-      <EventSearch/>
-    </View>
+    <Router />
+
+    // <View>
+    //   <StatusBar barStyle="light-content" />
+    //   {/*<Homepage />*/}
+    //   {/*<YourEvents />*/}
+    //   {/*<DestinationSearch/>*/}
+    //   {/*<SearchResults/>*/}
+    //   {/*<EventDetails/>*/}
+    //   {/*<SignIn />*/}
+    //   {/*<SignUp1/>*/}
+    //   {/*<EventSearch/>*/}
+    // </View>
   );
 };
 

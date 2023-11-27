@@ -20,18 +20,23 @@ import Pursuits from "../../Components/Pursuits";
 
 import searchIcon from '../../../assets/images/search.png';
 import filterIcon from '../../../assets/images/filter.png';
+import { useNavigation } from "@react-navigation/native";
 
 const SearchResults = () => {
+
+  const navigation = useNavigation();
+
   return (
+
     <View style={styles.background}>
       <ImageBackground
-        source={require('../../../assets/images/YourEvents.png')} // Use require to load the image
+        source={require('../../../assets/images/YourEvents.png')}
         style={styles.background}
       >
         <ScrollView style={styles.scrollView}>
           <Pressable
             style={styles.searchButton}
-            onPress={() => console.warn('Event Search')}>
+            onPress={() => navigation.navigate('Event Search')}>
             {/*onPress={() => navigation.navigate('EventSearch')}>*/}
             <Image source={searchIcon} style={styles.iconLeft} />
             <Text style={styles.searchButtonText}>Search activities</Text>

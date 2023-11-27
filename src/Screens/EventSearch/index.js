@@ -16,6 +16,7 @@ import backIcon from '../../../assets/images/whiteIcon.png';
 import searchResults from "../SearchResults";
 import Entypo from "react-native-vector-icons/Entypo";
 
+
 import search from "../../../assets/data/search"
 const EventSearch = (props) => {
 
@@ -36,15 +37,18 @@ const EventSearch = (props) => {
           onChangeText={setInputText}
           />
 
+        {/*PADARYTI PEREJIMA I SEARCH RESULTS*/}
+
+
         <FlatList
           data={search}
           renderItem={({item}) => (
-            <View style={styles.row}>
+            <Pressable style={styles.row}>
               <View style={styles.iconContainer}>
                 <Entypo name={"location-pin"} size={35} color={'#fff'}/>
               </View>
               <Text style={styles.eventText}>{item.description}</Text>
-            </View>
+            </Pressable>
           )}
         />
 

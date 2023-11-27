@@ -17,18 +17,21 @@ import SearchResultsMap from '../SearchResultsMap';
 
 import searchIcon from "../../../assets/images/search.png";
 import filterIcon from "../../../assets/images/filter.png";
+import { useNavigation } from "@react-navigation/native";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const MapView = () => {
 
+  const navigation = useNavigation();
   return (
     <View style={styles.background}>
       <View style={styles.scrollView}>
 
         <Pressable
           style={styles.searchButton}
-          onPress={() => console.warn('Event Search')}>
+          onPress={() => navigation.navigate('Event Search')}>
           {/*onPress={() => navigation.navigate('EventSearch')}>*/}
-          <Image source={searchIcon} style={styles.iconLeft} />
+          <Ionicons name="search" size={25} color="#fff" style={styles.iconLeft} />
           <Text style={styles.searchButtonText}>Search activities</Text>
           {/*<Image source={filterIcon} style={styles.iconRight} />*/}
 
@@ -37,8 +40,10 @@ const MapView = () => {
           style={styles.filterButton}
           onPress={() => console.warn('Filter Search')}>
           {/*onPress={() => navigation.navigate('Filter')}>*/}
-          <Image source={filterIcon} style={styles.iconRight} />
+          <Ionicons name="options-outline" size={25} color="#fff" style={styles.iconRight} />
         </Pressable>
+
+
 
         {/*<MiniFilters />*/}
 
