@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
     top: 80,
     zIndex: 101,
   },
+
 });
 
 export default styles;

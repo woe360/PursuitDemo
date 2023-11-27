@@ -19,26 +19,30 @@ import YourEvents from "./src/Screens/YourEvents";
 import DestinationSearch from "./src/Screens/DestinationSearch";
 import SearchResults from "./src/Screens/SearchResults";
 import EventDetails from "./src/Screens/EventDetails";
+import SignIn from "./src/Screens/SignIn";
+import SignUp1 from "./src/Screens/SignUp";
+import EventSearch from "./src/Screens/EventSearch";
 
 
 const App = () => {
   return (
-
-    <NavigationContainer>
-      <StatusBar barStyle="light-content" />
-      <Tabs />
-    </NavigationContainer>
-
-    // <View>
+    //
+    // <NavigationContainer>
     //   <StatusBar barStyle="light-content" />
-    //   {/*<Homepage />*/}
-    //   {/*<Tabs />*/}
-    //   {/*<Categories />*/}
-    //   {/*<YourEvents />*/}
-    //   {/*<DestinationSearch/>*/}
-    //   {/*<SearchResults/>*/}
-    //   <EventDetails/>
-    // </View>
+    //   <Tabs />
+    // </NavigationContainer>
+
+    <View>
+      <StatusBar barStyle="light-content" />
+      {/*<Homepage />*/}
+      {/*<YourEvents />*/}
+      {/*<DestinationSearch/>*/}
+      {/*<SearchResults/>*/}
+      {/*<EventDetails/>*/}
+      {/*<SignIn />*/}
+      {/*<SignUp1/>*/}
+      <EventSearch/>
+    </View>
   );
 };
 

@@ -24,8 +24,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     resizeMode: 'cover',
-    // backgroundColor: '#121214',
-
   },
   button: {
     backgroundColor: '#40DA46',
@@ -45,8 +43,8 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   searchButton: {
-    backgroundColor: '#9d9d9d',
-    opacity: 0.4,
+    backgroundColor: 'rgba(157,157,157,0.68)',
+    // opacity: 0.4,
     height: 60,
     width: Dimensions.get('screen').width - 20,
     borderRadius: 10,

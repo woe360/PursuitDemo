@@ -8,6 +8,7 @@ import {
   View,
   ScrollView,
   Dimensions,
+  Image,
 } from 'react-native';
 
 import styles from './styles';
@@ -15,37 +16,44 @@ import styles from './styles';
 import MiniFilters from '../../Components/MiniFilters';
 import Categories from '../../Components/Categories';
 import EventCarousel from '../../Components/EventCarousel';
+import Pursuits from "../../Components/Pursuits";
 
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Results from "../../Components/Results";
+import searchIcon from '../../../assets/images/search.png';
+import filterIcon from '../../../assets/images/filter.png';
 
 const SearchResults = () => {
-
   return (
     <View style={styles.background}>
-      <ScrollView style={styles.scrollView}>
+      <ImageBackground
+        source={require('../../../assets/images/YourEvents.png')} // Use require to load the image
+        style={styles.background}
+      >
+        <ScrollView style={styles.scrollView}>
+          <Pressable
+            style={styles.searchButton}
+            onPress={() => console.warn('Event Search')}>
+            {/*onPress={() => navigation.navigate('EventSearch')}>*/}
+            <Image source={searchIcon} style={styles.iconLeft} />
+            <Text style={styles.searchButtonText}>Search activities</Text>
+            {/*<Image source={filterIcon} style={styles.iconRight} />*/}
 
-        <Pressable
-          style={styles.searchButton}
-          onPress={() => console.warn('Event Search')}>
-          {/*  onPress={() => navigation.navigate('Destination Search')}>*/}
-          {/*<Fontisto name="search" size={25} color={'red'} />*/}
-          {/*<FontAwesome name="search" size={20} color="#000" />*/}
-          <Text style={styles.searchButtonText}>Search activities</Text>
-          {/*<FontAwesome name="filter" size={20} color="#000" />*/}
-        </Pressable>
+          </Pressable>
+          <Pressable
+            style={styles.filterButton}
+            onPress={() => console.warn('Filter Search')}>
+            {/*onPress={() => navigation.navigate('Filter')}>*/}
+            <Image source={filterIcon} style={styles.iconRight} />
+          </Pressable>
 
-        <Results/>
+          <MiniFilters />
 
+          <Text style={styles.title}>Events</Text>
 
-        <Pressable
-          style={styles.button}
-          onPress={() => console.warn('Explore events btn clicked')}>
-          <Text style={styles.buttonText}>Explore events</Text>
-        </Pressable>
-      </ScrollView>
+          <Pursuits />
+
+        </ScrollView>
+      </ImageBackground>
     </View>
   );
 };
-
 export default SearchResults;
