@@ -2,8 +2,8 @@ import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-const PriceRangeSlider = () => {
-  const [values, setValues] = useState([71, 221]);
+const DistanceRangeSlider = () => {
+  const [values, setValues] = useState([5, 45]);
 
   const CustomMarker = () => (
     <View style={styles.thumb}>
@@ -37,7 +37,7 @@ const PriceRangeSlider = () => {
         trackStyle={styles.customTrack}
       />
       <View style={styles.textContainer}>
-        <Text style={styles.text}>{`${values[0]}€ - ${values[1]}€`}</Text>
+        <Text style={styles.text}>{`${values[0]}KM - ${values[1]}KM`}</Text>
       </View>
     </View>
   );
@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default PriceRangeSlider;
+export default DistanceRangeSlider;

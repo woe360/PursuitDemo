@@ -25,6 +25,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import FilterMiniFilters from "../../Components/FilterMiniFilters";
 import Price from "../../Components/Price";
 import Date from "../../Components/Date";
+import Distance from "../../Components/Distance";
 
 const HomeScreen = (props) => {
   const navigation = useNavigation();
@@ -39,7 +40,7 @@ const HomeScreen = (props) => {
         <ScrollView style={styles.scrollView}>
 
           <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-            <Ionicons name="arrow-back" size={25} color="#fff" />
+            <Ionicons name="chevron-back" size={25} color="#fff" />
           </TouchableOpacity>
 
           <Text style={styles.titleMain}>Filter</Text>
@@ -56,8 +57,11 @@ const HomeScreen = (props) => {
 
           <Text style={styles.titleSecond}>Price</Text>
 
-
           <Price/>
+
+          <Text style={styles.titleSecond}>Distance</Text>
+
+          <Distance />
 
           <View style={styles.buttonRow}>
           <Pressable

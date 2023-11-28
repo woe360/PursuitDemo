@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   profileName: {
     fontSize: 24,
-    fontWeight: '450',
+    fontWeight: '600',
     color: '#fff',
     marginTop: 10, // Space between image and name
   },

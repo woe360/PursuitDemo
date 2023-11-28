@@ -33,7 +33,7 @@ const Router = (props) => {
         <Stack.Screen
           name={'Search Results'}
           component={SearchResults}
-          options={{headerShown: true}}
+          options={{headerShown: false}}
         />
 
         <Stack.Screen

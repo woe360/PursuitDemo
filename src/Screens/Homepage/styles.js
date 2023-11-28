@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   searchButtonText: {
     fontSize: 19,
-    fontWeight: '600',
+    fontWeight: '500',
     color: '#000000',
     marginRight: 95,
     marginLeft: 35,

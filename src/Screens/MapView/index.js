@@ -19,6 +19,7 @@ import searchIcon from "../../../assets/images/search.png";
 import filterIcon from "../../../assets/images/filter.png";
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import UserLocation from "./UserLocation";
 
 const MapView = () => {
 
@@ -42,6 +43,7 @@ const MapView = () => {
           {/*onPress={() => navigation.navigate('Filter')}>*/}
           <Ionicons name="options-outline" size={25} color="#fff" style={styles.iconRight} />
         </Pressable>
+
 
 
 

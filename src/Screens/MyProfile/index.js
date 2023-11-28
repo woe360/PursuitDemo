@@ -32,7 +32,7 @@ const MyProfile = (props) => {
         <ScrollView style={styles.scrollView}>
 
           <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-            <Ionicons name="arrow-back" size={25} color="#fff" />
+            <Ionicons name="chevron-back" size={25} color="#fff" />
           </TouchableOpacity>
 
           <View style={styles.titleContainerMain}>
