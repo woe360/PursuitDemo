@@ -7,6 +7,8 @@ import SearchResults from '../../Screens/SearchResults';
 import Tabs from "./Tabs";
 import MyProfile from "../../Screens/MyProfile";
 import { StatusBar } from "react-native";
+import EventDetails from "../../Screens/EventDetails";
+import Filter from "../../Screens/Filter";
 
 const Stack = createStackNavigator();
 
@@ -34,12 +36,22 @@ const Router = (props) => {
           options={{headerShown: true}}
         />
 
-
+        <Stack.Screen
+          name='Event Details'
+          component={EventDetails}
+          options={{headerShown: false}}
+        />
 
 
         <Stack.Screen
           name='Account'
           component={Tabs}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name='Filter'
+          component={Filter}
           options={{headerShown: false}}
         />
 

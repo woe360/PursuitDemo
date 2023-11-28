@@ -22,6 +22,7 @@ import EventDetails from "./src/Screens/EventDetails";
 import SignIn from "./src/Screens/SignIn";
 import SignUp1 from "./src/Screens/SignUp";
 import EventSearch from "./src/Screens/EventSearch";
+// import Filter from "./src/Screens/Filter";
 
 import Router from './src/Components/Navigation/Router';
 
@@ -46,6 +47,7 @@ const App = () => {
     //   {/*<SignIn />*/}
     //   {/*<SignUp1/>*/}
     //   {/*<EventSearch/>*/}
+    //   {/*<Filter />*/}
     // </View>
   );
 };

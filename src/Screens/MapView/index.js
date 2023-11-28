@@ -38,7 +38,7 @@ const MapView = () => {
         </Pressable>
         <Pressable
           style={styles.filterButton}
-          onPress={() => console.warn('Filter Search')}>
+          onPress={() => navigation.navigate('Filter')}>
           {/*onPress={() => navigation.navigate('Filter')}>*/}
           <Ionicons name="options-outline" size={25} color="#fff" style={styles.iconRight} />
         </Pressable>

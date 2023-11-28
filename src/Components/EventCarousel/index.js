@@ -8,10 +8,14 @@ import { View,
 } from 'react-native';
 
 import places from '../../../assets/data/feed';
+import { useNavigation } from "@react-navigation/native";
 
 const EventCard = ({ event, onPress }) => {
+
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity style={styles.card} onPress={onPress}>
+    <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Event Details')}>
       <ImageBackground source={event.image} style={styles.image}>
         <View style={styles.dateContainer}>
           <Text style={styles.dateText}>{event.date}</Text>

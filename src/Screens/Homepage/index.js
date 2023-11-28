@@ -42,7 +42,7 @@ const HomeScreen = (props) => {
         </Pressable>
         <Pressable
           style={styles.filterButton}
-          onPress={() => console.warn('Filter Search')}>
+          onPress={() => navigation.navigate('Filter')}>
           {/*onPress={() => navigation.navigate('Filter')}>*/}
           <Ionicons name="options-outline" size={25} color="#000" style={styles.iconRight} />
         </Pressable>

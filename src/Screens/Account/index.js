@@ -44,7 +44,7 @@ const Account = (props) => {
 
           <Pressable style={styles.button} onPress={() => navigation.navigate('My profile')}>
             {/*<FontAwesomeIcon icon={faAddressCard} />*/}
-            <Ionicons name="accessibility-outline" size={25} color="#fff" style={styles.icon} />
+            <Ionicons name="man-outline" size={25} color="#fff" style={styles.icon} />
             <Text style={styles.buttonText}>My profile</Text>
           </Pressable>
 
