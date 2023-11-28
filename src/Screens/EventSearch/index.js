@@ -6,7 +6,7 @@ import {
   View,
   Image,
   TextInput,
-  FlatList,
+  FlatList, TouchableOpacity,
 } from "react-native";
 
 import styles from './styles';
@@ -16,19 +16,27 @@ import backIcon from '../../../assets/images/whiteIcon.png';
 import searchResults from "../SearchResults";
 import Entypo from "react-native-vector-icons/Entypo";
 
-
 import search from "../../../assets/data/search"
+import Ionicons from "react-native-vector-icons/Ionicons";
+import { useNavigation } from "@react-navigation/native";
 const EventSearch = (props) => {
 
   const [inputText, setInputText] = useState("");
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}
           style={styles.background}>
       <ImageBackground
-        source={require('../../../assets/images/Homepage.png')}
+        source={require('../../../assets/images/Loading.png')}
         style={styles.background}
       >
+
+        <View style={styles.SearchButton}>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+          <Ionicons name="arrow-back" size={25} color="#fff" />
+        </TouchableOpacity>
+
         <TextInput
           style={styles.textInput}
           placeholder="Search Event"
@@ -36,6 +44,13 @@ const EventSearch = (props) => {
           value={inputText}
           onChangeText={setInputText}
           />
+        <Pressable
+          style={styles.filterButton}
+          onPress={() => console.warn('Filter Search')}>
+          {/*onPress={() => navigation.navigate('Filter')}>*/}
+          <Ionicons name="options-outline" size={25} color="#fff" style={styles.icon} />
+        </Pressable>
+        </View>
 
         {/*PADARYTI PEREJIMA I SEARCH RESULTS*/}
 

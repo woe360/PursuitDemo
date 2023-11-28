@@ -6,7 +6,7 @@ import {
   ScrollView,
   Image,
   TextInput,
-  TouchableOpacity,
+  TouchableOpacity, Pressable,
 } from "react-native";
 
 import styles from './styles';
@@ -19,9 +19,9 @@ const MyProfile = (props) => {
   const navigation = useNavigation();
 
   const [name, setName] = useState('Domas Šestakovas');
-  const [email, setEmail] = useState('example@example.com');
-  const [phone, setPhone] = useState('1234567890');
-  const [password, setPassword] = useState('askdsamdaks');
+  const [email, setEmail] = useState('domas@email.com');
+  const [phone, setPhone] = useState('+37062388932');
+  const [password, setPassword] = useState('**********');
 
   return (
     <View style={styles.background}>
@@ -41,7 +41,7 @@ const MyProfile = (props) => {
 
           <View style={styles.profileContainer}>
             <Image source={Rube} style={styles.profile} />
-            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.iconLeft} />
+            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.icon} />
             <Text style={styles.profileName}>Domas Šestakovas</Text>
           </View>
 
@@ -49,7 +49,8 @@ const MyProfile = (props) => {
             <Text style={styles.titleSecond}>Edit details</Text>
           </View>
 
-          <View style={styles.inputContainerSecond}>
+          <View style={styles.inputContainer}>
+          {/*<View style={styles.inputContainerSecond}>*/}
             <Text style={styles.inputLabel}></Text>
             <TextInput
               style={styles.input}
@@ -57,8 +58,10 @@ const MyProfile = (props) => {
               onChangeText={setName}
               placeholder="Enter your name"
             />
-            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.iconLeft} />
+            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.icon} />
+          </View>
 
+          <View style={styles.inputContainer}>
             <Text style={styles.inputLabel}></Text>
             <TextInput
               style={styles.input}
@@ -66,8 +69,10 @@ const MyProfile = (props) => {
               onChangeText={setEmail}
               placeholder="Enter your email"
             />
-            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.iconLeft} />
+            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.icon} />
+          </View>
 
+            <View style={styles.inputContainer}>
             <Text style={styles.inputLabel}></Text>
             <TextInput
               style={styles.input}
@@ -75,12 +80,14 @@ const MyProfile = (props) => {
               onChangeText={setPhone}
               placeholder="Enter your phone number"
             />
-            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.iconLeft} />
+            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.icon} />
+            </View>
 
             <View style={styles.titleContainer}>
               <Text style={styles.titleSecond}>Change password</Text>
             </View>
 
+            <View style={styles.inputContainer}>
             <Text style={styles.inputLabel}></Text>
             <TextInput
               style={styles.input}
@@ -89,8 +96,9 @@ const MyProfile = (props) => {
               hidde
               placeholder="Change your password"
             />
-            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.iconLeft} />
-          </View>
+            <Ionicons name="pencil-outline" size={25} color="#fff" style={styles.icon} />
+            </View>
+
         </ScrollView>
       </ImageBackground>
     </View>

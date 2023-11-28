@@ -59,7 +59,7 @@ const HomeScreen = (props) => {
 
         <Pressable
           style={styles.button}
-          onPress={() => console.warn('Explore events btn clicked')}>
+          onPress={() => navigation.navigate('Event Search')}>
           <Text style={styles.buttonText}>Explore events</Text>
         </Pressable>
       </ScrollView>

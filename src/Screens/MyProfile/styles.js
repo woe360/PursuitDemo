@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
   profileContainer: {
     alignItems: 'center',
     marginTop: 70,
-
   },
   profile: {
     width: 100,
@@ -64,12 +63,17 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     marginTop: 20,
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   inputLabel: {
     fontSize: 16,
     color: '#fff',
     marginBottom: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 35,
   },
   input: {
     backgroundColor: 'rgba(157,157,157,0.28)',
@@ -94,6 +98,10 @@ const styles = StyleSheet.create({
     top: 65,
     left: 20,
     zIndex: 10,
+  },
+  icon: {
+    marginHorizontal: -35,
+    marginBottom: 12,
   },
 });
 

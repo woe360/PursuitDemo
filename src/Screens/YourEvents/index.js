@@ -16,6 +16,7 @@ import { Header } from "react-native/Libraries/NewAppScreen";
 import HeaderWithIcons from "../../Components/HeaderWithIcons";
 import Pursuits from "../../Components/Pursuits";
 import PastPursuits from "../../Components/PastPursuits";
+import { useNavigation } from "@react-navigation/native";
 
 const YourEvents = () => {
   const [selectedPage, setSelectedPage] = useState('upcoming');
@@ -23,6 +24,8 @@ const YourEvents = () => {
   const handleToggle = (selection) => {
     setSelectedPage(selection);
   };
+
+  const navigation = useNavigation();
 
   return (
     <ImageBackground
@@ -39,7 +42,7 @@ const YourEvents = () => {
 
         <Pressable
           style={styles.button}
-          onPress={() => console.warn('Explore events btn clicked')}>
+          onPress={() => navigation.navigate('Event Search')}>
           <Text style={styles.buttonText}>Explore events</Text>
         </Pressable>
       </ScrollView>

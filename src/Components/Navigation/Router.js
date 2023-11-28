@@ -6,12 +6,14 @@ import SearchResults from '../../Screens/SearchResults';
 
 import Tabs from "./Tabs";
 import MyProfile from "../../Screens/MyProfile";
+import { StatusBar } from "react-native";
 
 const Stack = createStackNavigator();
 
 const Router = (props) => {
   return (
     <NavigationContainer>
+      <StatusBar barStyle="light-content" />
       <Stack.Navigator>
 
         <Stack.Screen
@@ -23,7 +25,7 @@ const Router = (props) => {
         <Stack.Screen
           name='Event Search'
           component={EventSearch}
-          options={{headerShown: true}}
+          options={{headerShown: false}}
         />
 
         <Stack.Screen

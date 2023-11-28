@@ -51,13 +51,13 @@ const styles = StyleSheet.create({
   textInput: {
     fontSize: 20,
     marginBottom: 20,
-    marginTop: 50,
+    marginTop: 60,
     color: '#fff',
     backgroundColor: 'rgba(157,157,157,0.22)',
     padding: 7,
     height: 60,
-    width: '90%',
-    marginLeft: 20,
+    width: '70%',
+    marginLeft: 60,
     borderRadius: 10,
   },
   container: {
@@ -82,6 +82,24 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginLeft: 15,
     fontSize: 15,
+  },
+  backButton: {
+    position: 'absolute',
+    top: 80,
+    left: 20,
+    zIndex: 10,
+  },
+  SearchButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  filterButton: {
+  },
+  icon: {
+    marginRight: 25,
+    top: 20,
+    marginLeft: 10,
   },
 });
 
